@@ -1,5 +1,5 @@
 # Makefile для проекта stesh-portfolio
-# Автор: Никита Стешов (slesh)
+# Автор: Стешов Никита (slesh)
 
 .PHONY: help build run stop clean dev docker-build docker-run docker-stop logs status
 

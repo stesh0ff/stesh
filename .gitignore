@@ -64,3 +64,6 @@ temp/
 # Node modules (if using npm for frontend tools)
 node_modules/
 
+# Service Worker should be included
+!sw.js
+

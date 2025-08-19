@@ -2,15 +2,39 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Никита Стешов (slesh) - Senior Golang Developer. Специализируюсь на высоконагруженных системах, микросервисах и оптимизации производительности.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Стешов Никита (slesh) - Golang Developer. Специализируюсь на высоконагруженных системах, микросервисах и оптимизации производительности.">
     <meta name="keywords" content="Golang, Go Developer, Backend Developer, МТС, Cloud.ru, ASOC, высоконагруженные системы, микросервисы">
-    <meta name="author" content="Никита Стешов (slesh)">
-    <meta property="og:title" content="Никита Стешов (slesh) - Senior Golang Developer">
-    <meta property="og:description" content="Senior Golang Developer с опытом работы в МТС и Cloud.ru">
+    <meta name="author" content="Стешов Никита (slesh)">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Стешов Никита (slesh) - Golang Developer">
+    <meta property="og:description" content="Golang Developer с опытом работы в МТС и Cloud.ru">
     <meta property="og:url" content="https://stesh.net">
     <meta property="og:type" content="website">
-    <title>Никита Стешов (slesh) - Senior Golang Developer</title>
+    <meta property="og:image" content="https://stesh.net/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Стешов Никита (slesh) - Golang Developer">
+    <meta name="twitter:description" content="Golang Developer с опытом работы в МТС и Cloud.ru">
+    <meta name="twitter:image" content="https://stesh.net/og-image.jpg">
+    
+    <!-- Mobile Optimization -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="msapplication-TileColor" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Performance -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <title>Стешов Никита (slesh) - Golang Developer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -21,7 +45,7 @@
         <header class="header">
             <div class="profile-section">
                 <div class="profile-content">
-                    <h1>Никита Сергеевич Стешов</h1>
+                    <h1>Стешов Никита</h1>
                     <div class="alias">aka <span class="highlight">slesh</span> • <span class="highlight">./stesh</span></div>
                     <div class="age-info">23 года • Москва</div>
                     <h2>Golang Backend Developer</h2>
@@ -32,16 +56,12 @@
                             <span>stesh.net</span>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+7 (915) 338-72-25</span>
-                        </div>
-                        <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <span>nikita.steshov@gmail.com</span>
                         </div>
                         <div class="contact-item">
                             <i class="fab fa-telegram"></i>
-                            <span>@sirperrier</span>
+                            <span>@sleshstesh</span>
                         </div>
                     </div>
                 </div>
@@ -188,7 +208,7 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
-                <p>&copy; 2024 Никита Стешов (slesh). Все права защищены.</p>
+                <p>&copy; 2024 Стешов Никита (slesh). Все права защищены.</p>
                 <div class="footer-links">
                     <span class="footer-link">stesh.net</span>
                     <span class="footer-link">Made with ❤️ in Go</span>
@@ -198,85 +218,367 @@
     </div>
 
     <script>
-        // Add smooth scrolling and animations
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.experience-card');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-in');
-                    }
+        // Modern JavaScript with performance optimizations
+        class PortfolioAnimations {
+            constructor() {
+                this.init();
+                this.setupIntersectionObserver();
+                this.setupContactInteractions();
+                this.setupMicroInteractions();
+                this.setupPerformanceOptimizations();
+            }
+
+            init() {
+                // Wait for DOM to be ready
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', () => this.startAnimations());
+                } else {
+                    this.startAnimations();
+                }
+            }
+
+            startAnimations() {
+                this.typewriterEffect();
+                this.setupSmoothScrolling();
+                this.setupParallaxEffects();
+            }
+
+            setupIntersectionObserver() {
+                // Modern Intersection Observer with better performance
+                const observerOptions = {
+                    threshold: [0.1, 0.3, 0.7],
+                    rootMargin: '50px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry, index) => {
+                        if (entry.isIntersecting) {
+                            // Stagger animation for better visual effect
+                            setTimeout(() => {
+                                entry.target.classList.add('animate-in');
+                                this.animateChildElements(entry.target);
+                            }, index * 100);
+                            
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe all cards and sections
+                document.querySelectorAll('.experience-card, .section-title').forEach(el => {
+                    observer.observe(el);
                 });
-            }, { threshold: 0.1 });
+            }
 
-            cards.forEach(card => {
-                observer.observe(card);
-            });
+            animateChildElements(card) {
+                // Animate tech tags with stagger effect
+                const techTags = card.querySelectorAll('.tech-tag');
+                techTags.forEach((tag, index) => {
+                    setTimeout(() => {
+                        tag.style.opacity = '1';
+                        tag.style.transform = 'translateY(0) scale(1)';
+                    }, index * 50);
+                });
 
-            // Typing effect for alias
-            const aliasElement = document.querySelector('.alias');
-            const originalText = aliasElement.textContent;
-            aliasElement.style.opacity = '0';
-            
-            setTimeout(() => {
+                // Animate achievements
+                const achievements = card.querySelectorAll('.achievement');
+                achievements.forEach((achievement, index) => {
+                    setTimeout(() => {
+                        achievement.style.opacity = '1';
+                        achievement.style.transform = 'translateX(0)';
+                    }, index * 100);
+                });
+            }
+
+            typewriterEffect() {
+                const aliasElement = document.querySelector('.alias');
+                if (!aliasElement) return;
+
+                const text = aliasElement.textContent;
+                aliasElement.innerHTML = '';
                 aliasElement.style.opacity = '1';
-                aliasElement.textContent = '';
-                let i = 0;
+
+                let index = 0;
+                const typeSpeed = 80;
+                const startDelay = 1000;
+
                 const typeWriter = () => {
-                    if (i < originalText.length) {
-                        aliasElement.innerHTML = originalText.substring(0, i + 1);
-                        i++;
-                        setTimeout(typeWriter, 100);
+                    if (index < text.length) {
+                        // Preserve HTML for highlights
+                        const beforeHighlight = text.substring(0, index + 1);
+                        aliasElement.innerHTML = beforeHighlight
+                            .replace(/slesh/g, '<span class="highlight">slesh</span>')
+                            .replace(/\.\/stesh/g, '<span class="highlight">./stesh</span>');
+                        index++;
+                        setTimeout(typeWriter, typeSpeed);
+                    } else {
+                        // Add cursor blink effect
+                        aliasElement.innerHTML += '<span class="cursor">|</span>';
+                        setTimeout(() => {
+                            const cursor = aliasElement.querySelector('.cursor');
+                            if (cursor) cursor.remove();
+                        }, 2000);
                     }
                 };
-                typeWriter();
-            }, 1000);
 
-            // Parallax effect for cards
-            window.addEventListener('scroll', () => {
-                const scrollTop = window.pageYOffset;
-                cards.forEach((card, index) => {
-                    const speed = 0.5 + (index * 0.1);
-                    card.style.transform = `translateY(${scrollTop * speed * -0.1}px)`;
-                });
-            });
+                setTimeout(typeWriter, startDelay);
+            }
 
-            // Interactive hover effects
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform += ' scale(1.02)';
-                });
+            setupContactInteractions() {
+                const contactItems = document.querySelectorAll('.contact-item');
                 
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = this.style.transform.replace(' scale(1.02)', '');
-                });
-            });
+                contactItems.forEach(item => {
+                    // Click to copy with modern async/await
+                    item.addEventListener('click', async (e) => {
+                        const text = item.querySelector('span').textContent;
+                        
+                        try {
+                            await navigator.clipboard.writeText(text);
+                            this.showTooltip(item, 'Скопировано!', 'success');
+                            
+                            // Haptic feedback for mobile
+                            if ('vibrate' in navigator) {
+                                navigator.vibrate(50);
+                            }
+                        } catch (err) {
+                            this.showTooltip(item, 'Ошибка копирования', 'error');
+                        }
+                    });
 
-            // Add click to copy functionality for contact info
-            const contactItems = document.querySelectorAll('.contact-item');
-            contactItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const text = this.querySelector('span').textContent;
-                    navigator.clipboard.writeText(text).then(() => {
-                        // Show tooltip
-                        const tooltip = document.createElement('div');
-                        tooltip.textContent = 'Скопировано!';
-                        tooltip.style.cssText = `
-                            position: absolute;
-                            background: #333;
-                            color: white;
-                            padding: 5px 10px;
-                            border-radius: 4px;
-                            font-size: 12px;
-                            z-index: 1000;
-                            pointer-events: none;
-                        `;
-                        this.appendChild(tooltip);
-                        setTimeout(() => tooltip.remove(), 2000);
+                    // Modern hover effects
+                    item.addEventListener('mouseenter', () => {
+                        this.addRippleEffect(item);
                     });
                 });
-            });
+            }
+
+            showTooltip(element, message, type = 'success') {
+                // Remove existing tooltip
+                const existingTooltip = element.querySelector('.tooltip');
+                if (existingTooltip) existingTooltip.remove();
+
+                const tooltip = document.createElement('div');
+                tooltip.className = 'tooltip';
+                tooltip.textContent = message;
+                
+                const colors = {
+                    success: { bg: '#10b981', color: '#ffffff' },
+                    error: { bg: '#ef4444', color: '#ffffff' }
+                };
+
+                Object.assign(tooltip.style, {
+                    position: 'absolute',
+                    top: '-40px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    background: colors[type].bg,
+                    color: colors[type].color,
+                    padding: '8px 12px',
+                    borderRadius: '8px',
+                    fontSize: '12px',
+                    fontWeight: '500',
+                    zIndex: '1000',
+                    pointerEvents: 'none',
+                    opacity: '0',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
+                });
+
+                element.appendChild(tooltip);
+                
+                // Animate in
+                requestAnimationFrame(() => {
+                    tooltip.style.opacity = '1';
+                    tooltip.style.transform = 'translateX(-50%) translateY(-5px)';
+                });
+
+                // Remove after delay
+                setTimeout(() => {
+                    tooltip.style.opacity = '0';
+                    tooltip.style.transform = 'translateX(-50%) translateY(5px)';
+                    setTimeout(() => tooltip.remove(), 300);
+                }, 2000);
+            }
+
+            addRippleEffect(element) {
+                const ripple = document.createElement('span');
+                ripple.className = 'ripple';
+                
+                Object.assign(ripple.style, {
+                    position: 'absolute',
+                    borderRadius: '50%',
+                    background: 'rgba(255, 255, 255, 0.4)',
+                    transform: 'scale(0)',
+                    animation: 'ripple 0.6s linear',
+                    left: '50%',
+                    top: '50%',
+                    marginLeft: '-20px',
+                    marginTop: '-20px',
+                    width: '40px',
+                    height: '40px',
+                    pointerEvents: 'none'
+                });
+
+                element.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            }
+
+            setupMicroInteractions() {
+                // Smooth scale animations for tech tags
+                document.querySelectorAll('.tech-tag').forEach(tag => {
+                    // Initially hide for animation
+                    tag.style.opacity = '0';
+                    tag.style.transform = 'translateY(20px) scale(0.8)';
+                    tag.style.transition = 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                });
+
+                // Smooth hover for company logos
+                document.querySelectorAll('.company-logo').forEach(logo => {
+                    logo.addEventListener('mouseenter', () => {
+                        logo.style.filter = 'brightness(1.1) saturate(1.2)';
+                    });
+                    
+                    logo.addEventListener('mouseleave', () => {
+                        logo.style.filter = 'brightness(1) saturate(1)';
+                    });
+                });
+
+                // Interactive achievements
+                document.querySelectorAll('.achievement').forEach(achievement => {
+                    achievement.style.opacity = '0';
+                    achievement.style.transform = 'translateX(-20px)';
+                    achievement.style.transition = 'all 0.4s ease';
+                });
+            }
+
+            setupSmoothScrolling() {
+                // Enhanced smooth scrolling for better UX
+                document.documentElement.style.scrollBehavior = 'smooth';
+                
+                // Custom scroll handling for better performance
+                let ticking = false;
+                
+                const handleScroll = () => {
+                    if (!ticking) {
+                        requestAnimationFrame(() => {
+                            this.updateScrollEffects();
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                };
+
+                window.addEventListener('scroll', handleScroll, { passive: true });
+            }
+
+            setupParallaxEffects() {
+                // Subtle parallax with better performance
+                const parallaxElements = document.querySelectorAll('.experience-card');
+                
+                window.addEventListener('scroll', () => {
+                    if (window.innerWidth > 768) { // Only on desktop
+                        const scrollTop = window.pageYOffset;
+                        
+                        parallaxElements.forEach((element, index) => {
+                            const rect = element.getBoundingClientRect();
+                            const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+                            
+                            if (isInView) {
+                                const speed = 0.02 + (index * 0.01);
+                                const yPos = scrollTop * speed;
+                                element.style.transform = `translateY(${yPos}px)`;
+                            }
+                        });
+                    }
+                }, { passive: true });
+            }
+
+            updateScrollEffects() {
+                const scrollProgress = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
+                
+                // Update header background opacity based on scroll
+                const header = document.querySelector('.header');
+                if (header) {
+                    const opacity = Math.min(scrollProgress * 2, 1);
+                    header.style.setProperty('--scroll-opacity', opacity);
+                }
+            }
+
+            setupPerformanceOptimizations() {
+                // Preload critical images
+                const imageUrls = [];
+                imageUrls.forEach(url => {
+                    const link = document.createElement('link');
+                    link.rel = 'preload';
+                    link.href = url;
+                    link.as = 'image';
+                    document.head.appendChild(link);
+                });
+
+                // Lazy load non-critical content
+                if ('IntersectionObserver' in window) {
+                    // Already using Intersection Observer
+                } else {
+                    // Fallback for older browsers
+                    document.querySelectorAll('.experience-card').forEach(card => {
+                        card.classList.add('animate-in');
+                    });
+                }
+
+                // Service Worker registration for PWA capabilities
+                if ('serviceWorker' in navigator) {
+                    window.addEventListener('load', () => {
+                        navigator.serviceWorker.register('/sw.js')
+                            .then(registration => {
+                                console.log('SW registered: ', registration);
+                            })
+                            .catch(registrationError => {
+                                console.log('SW registration failed: ', registrationError);
+                            });
+                    });
+                }
+            }
+        }
+
+        // Add ripple animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            
+            .cursor {
+                animation: blink 1s infinite;
+                color: var(--color-accent, #06d6a0);
+            }
+            
+            @keyframes blink {
+                0%, 50% { opacity: 1; }
+                51%, 100% { opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize the portfolio animations
+        new PortfolioAnimations();
+
+        // Add theme detection and system preferences
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.documentElement.style.setProperty('--transition-base', '0.01ms');
+            document.documentElement.style.setProperty('--transition-slow', '0.01ms');
+        }
+
+        // Add performance monitoring
+        window.addEventListener('load', () => {
+            if ('performance' in window) {
+                const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+                if (loadTime > 3000) {
+                    console.warn('Page load time is high:', loadTime + 'ms');
+                }
+            }
         });
     </script>
 </body>
